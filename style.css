@@ -16,8 +16,8 @@ a:hover {
 }
 
 h1, h2 {
-  font-weight: 700;
   color: #003366;
+  font-weight: 700;
 }
 
 p {
@@ -39,16 +39,19 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   height: 40px;
+  margin-right: 10px;
 }
 
 .nav-links {
@@ -60,8 +63,17 @@ header {
   padding: 5px;
 }
 
-.nav-links a {
+.cta-btn {
+  background: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #001f4d;
 }
 
 /* Hero Section */
@@ -69,7 +81,7 @@ header {
   text-align: center;
   background: linear-gradient(to right, #007bff, #00aaff);
   color: #fff;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .hero h1 {
@@ -78,32 +90,70 @@ header {
 }
 
 .hero .cta-btn {
-  display: inline-block;
-  background: #003366;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background: #fff;
+  color: #007bff;
   margin-top: 20px;
 }
 
 .hero .cta-btn:hover {
-  background: #001f4d;
+  background: #f8f9fa;
 }
 
-/* Section Styles */
-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Overview Section */
+.overview {
   text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
 }
 
-.card {
+.overview p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Key Features Section */
+.features {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
   background: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
-  margin-top: 20px;
+  width: 300px;
+}
+
+.feature h3 {
+  color: #0056b3;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #e9f5ff;
+}
+
+.contact-btn {
+  background: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.contact-btn:hover {
+  background: #001f4d;
 }
 
 /* Footer */
@@ -112,6 +162,5 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
 }
 
