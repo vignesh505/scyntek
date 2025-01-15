@@ -11,37 +11,28 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="navbar">
-      <button class="menu-btn" id="menu-btn">
-        <div class="dots-menu"></div>
-      </button>
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#product">Our Product</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       <img src="logo.png" alt="Scyntek Logo" class="logo">
-    </div>
+    </nav>
   </header>
-
-  <!-- Sidebar Menu -->
-  <div class="sidebar" id="sidebar">
-    <button class="close-btn" id="close-btn">
-      <div class="dots-close"></div>
-    </button>
-    <ul class="menu-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#product">Our Lead Product</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
     <model-viewer src="dvt.glb" alt="DVTect Device" auto-rotate camera-controls environment-image="neutral"></model-viewer>
     <h1>DVTect: A New Era of DVT Detection</h1>
+    <p>Revolutionizing patient care with innovative, non-invasive technology.</p>
   </section>
 
   <!-- About Us Section -->
   <section id="about" class="about">
     <h2>About Us</h2>
-    <p>Scyntek is a healthcare technology company revolutionizing non-invasive monitoring for patient care. Our mission is to empower patients with proactive healthcare solutions.</p>
+    <p>Scyntek is dedicated to transforming healthcare through innovation, empowering patients and providers with cutting-edge solutions.</p>
     <div class="founders">
       <div class="team-member">
         <img src="Vignesh.jpg" alt="Vignesh">
@@ -62,13 +53,13 @@
     </div>
   </section>
 
-  <!-- Our Lead Product Section -->
+  <!-- Our Product Section -->
   <section id="product" class="product">
     <h2>Our Lead Product</h2>
-    <p>DVTect is a cutting-edge device designed for continuous, non-invasive blood flow monitoring, enabling early detection of DVT.</p>
+    <p>DVTect: Continuous, non-invasive blood flow monitoring to detect DVT early and prevent complications.</p>
     <div class="features">
       <div class="feature">
-        <h3>Non-Invasive Monitoring</h3>
+        <h3>Continuous Monitoring</h3>
         <p>Integrated PPG sensors for real-time blood flow analysis.</p>
       </div>
       <div class="feature">
@@ -76,8 +67,12 @@
         <p>Instant notifications for irregular blood flow patterns.</p>
       </div>
       <div class="feature">
-        <h3>Compact and Comfortable</h3>
+        <h3>Compact & Comfortable</h3>
         <p>Designed for everyday wear with patient comfort in mind.</p>
+      </div>
+      <div class="feature">
+        <h3>Proactive Health Management</h3>
+        <p>Facilitates early intervention, reducing risks of pulmonary embolisms.</p>
       </div>
     </div>
   </section>
@@ -85,7 +80,7 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Have questions? We'd love to hear from you!</p>
+    <p>Have questions? We’d love to hear from you!</p>
     <p>Email: <a href="mailto:info@scyntek.com">info@scyntek.com</a></p>
     <p>Follow us on <a href="https://www.linkedin.com/company/scyntek/about/" target="_blank">LinkedIn</a></p>
   </section>
@@ -94,21 +89,5 @@
   <footer>
     <p>© 2025 Scyntek. All rights reserved.</p>
   </footer>
-
-  <!-- Scripts -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-btn');
-    const sidebar = document.getElementById('sidebar');
-
-    menuBtn.addEventListener('click', () => {
-      sidebar.style.transform = 'translateX(0)';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.style.transform = 'translateX(-100%)';
-    });
-  </script>
 </body>
 </html>
-
