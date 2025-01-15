@@ -36,52 +36,72 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  z-index: 1000;
   background: #fff;
+  z-index: 1000;
 }
 
 .logo {
   height: 40px;
 }
 
+/* Hamburger Menu Button */
 .menu-btn {
-  width: 40px;
-  height: 40px;
-  border: none;
+  width: 50px;
+  height: 50px;
   background: none;
+  border: none;
   position: relative;
   cursor: pointer;
-}
-
-.hamburger {
-  width: 24px;
-  height: 24px;
-  background: white;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
-.hamburger:before,
-.hamburger:after {
-  content: '';
-  width: 4px;
-  height: 4px;
+.dots-menu {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 8px);
+  grid-template-rows: repeat(3, 8px);
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+}
+
+.dots-menu::before,
+.dots-menu::after {
+  content: "";
+  display: block;
   background: #d33682;
   border-radius: 50%;
-  position: absolute;
+  width: 8px;
+  height: 8px;
 }
 
-.hamburger:before {
-  top: 6px;
-  left: 6px;
+/* Close Button (4 Dots) */
+.dots-close {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 10px);
+  grid-template-rows: repeat(2, 10px);
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
 }
 
-.hamburger:after {
-  top: 6px;
-  right: 6px;
+.dots-close::before,
+.dots-close::after {
+  content: "";
+  display: block;
+  background: #d33682;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
 /* Sidebar Menu */
@@ -96,14 +116,6 @@ header {
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 1100;
-}
-
-.close-btn {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin: 10px;
 }
 
 .menu-links {
@@ -146,18 +158,39 @@ model-viewer {
   }
 }
 
-/* Sections Beyond Hero */
-section {
-  padding: 80px 20px;
-  min-height: 100vh;
+/* About Section */
+.about {
+  padding: 60px 20px;
 }
 
-.about, .product, .contact {
-  display: none; /* Initially hidden */
+.founders img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
 }
 
-:target {
-  display: block; /* Only show sections when scrolled to */
+/* Product Section */
+.product {
+  padding: 60px 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
 }
 
 /* Footer */
