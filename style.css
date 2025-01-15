@@ -1,7 +1,7 @@
 /* General */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle, #f0f8ff, #ffffff);
   scroll-behavior: smooth;
 }
@@ -15,6 +15,12 @@ p {
   text-align: center;
   margin: 10px 20px;
   color: #555;
+}
+
+.section-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
 /* Header */
@@ -34,31 +40,16 @@ header {
   padding: 10px 20px;
 }
 
-.navbar .menu {
-  display: flex;
-  list-style: none;
-}
-
-.navbar .menu li {
-  margin: 0 15px;
-}
-
-.navbar .menu a {
-  text-decoration: none;
-  color: #3b4b6b;
-  font-weight: 500;
-}
-
-/* Logo with Dropdown */
 .logo-container {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .logo {
   height: 40px;
   cursor: pointer;
+  background: linear-gradient(to right, #f0f8ff, #ffffff);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .logo-link:hover + .dropdown-menu,
@@ -111,17 +102,14 @@ h1 {
 
 /* About Us Section */
 .about {
+  background: #f7fbff;
   padding: 60px 20px;
-}
-
-.about h2 {
-  margin-bottom: 20px;
 }
 
 .founders {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 40px; /* Increased spacing between items */
+  gap: 40px;
   justify-items: center;
 }
 
@@ -134,6 +122,7 @@ h1 {
 
 /* Product Section */
 .product {
+  background: #eef5fc;
   padding: 60px 20px;
 }
 
@@ -153,6 +142,7 @@ h1 {
 
 /* Contact Section */
 .contact {
+  background: #f7fbff;
   padding: 60px 20px;
 }
 
@@ -162,9 +152,4 @@ footer {
   color: #fff; /* Changed to white */
   padding: 10px 0;
   text-align: center;
-}
-
-  .menu-toggle {
-    display: flex;
-  }
 }
