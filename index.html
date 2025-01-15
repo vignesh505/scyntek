@@ -12,13 +12,20 @@
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <ul class="menu">
+      <div class="logo-container">
+        <img src="logo.png" alt="Scyntek Logo" class="logo">
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="menu" id="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#product">Our Product</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <img src="logo.png" alt="Scyntek Logo" class="logo">
     </nav>
   </header>
 
@@ -89,6 +96,15 @@
   <footer>
     <p>© 2025 Scyntek. All rights reserved.</p>
   </footer>
+  
+  <script>
+    // Menu toggle functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
-
