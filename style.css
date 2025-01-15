@@ -2,7 +2,6 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle, #f0f8ff, #ffffff);
   scroll-behavior: smooth;
 }
 
@@ -86,6 +85,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: radial-gradient(circle, #f0f8ff, #e8f3ff);
 }
 
 model-viewer {
@@ -102,7 +102,7 @@ h1 {
 
 /* About Us Section */
 .about {
-  background: #f7fbff;
+  background: linear-gradient(to right, #e8f3ff, #d6eaff);
   padding: 60px 20px;
 }
 
@@ -122,7 +122,7 @@ h1 {
 
 /* Product Section */
 .product {
-  background: #eef5fc;
+  background: linear-gradient(to left, #d6eaff, #c4e0ff);
   padding: 60px 20px;
 }
 
@@ -142,7 +142,7 @@ h1 {
 
 /* Contact Section */
 .contact {
-  background: #f7fbff;
+  background: linear-gradient(to bottom, #c4e0ff, #b3d7ff);
   padding: 60px 20px;
 }
 
@@ -153,3 +153,4 @@ footer {
   padding: 10px 0;
   text-align: center;
 }
+
