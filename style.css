@@ -5,10 +5,11 @@ body {
   background: radial-gradient(circle, #e6f7ff, #ffffff);
   color: #333;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1, h2 {
-  color: #0056b3;
+  color: #5a698f;
   text-align: center;
 }
 
@@ -31,13 +32,12 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   z-index: 1000;
+  background: #fff;
 }
 
 .logo {
@@ -45,10 +45,43 @@ header {
 }
 
 .menu-btn {
-  font-size: 1.5rem;
-  background: none;
+  width: 40px;
+  height: 40px;
   border: none;
+  background: none;
+  position: relative;
   cursor: pointer;
+}
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #d33682;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.hamburger:before {
+  top: 6px;
+  left: 6px;
+}
+
+.hamburger:after {
+  top: 6px;
+  right: 6px;
 }
 
 /* Sidebar Menu */
@@ -88,48 +121,43 @@ header {
 
 /* Hero Section */
 .hero {
-  margin-top: 80px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 model-viewer {
   width: 400px;
   height: 400px;
+  margin-bottom: 20px;
 }
 
-/* About Section */
-.about {
-  padding: 60px 20px;
+@media (max-width: 768px) {
+  model-viewer {
+    width: 300px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
 }
 
-.founders img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 10px;
+/* Sections Beyond Hero */
+section {
+  padding: 80px 20px;
+  min-height: 100vh;
 }
 
-/* Product Section */
-.product {
-  padding: 60px 20px;
+.about, .product, .contact {
+  display: none; /* Initially hidden */
 }
 
-.features {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.feature {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-.contact {
-  padding: 60px 20px;
+:target {
+  display: block; /* Only show sections when scrolled to */
 }
 
 /* Footer */
