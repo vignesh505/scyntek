@@ -3,60 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scyntek - Revolutionizing Patient Care</title>
-  <link rel="stylesheet" href="style.css">
+  <title>DVTect - A New Era of DVT Detection</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header Section -->
+  <!-- Header -->
   <header>
     <div class="navbar">
       <div class="logo-container">
         <img src="logo.png" alt="Scyntek Logo" class="logo">
         <span class="company-name">Scyntek</span>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#overview">About</a></li>
-          <li><a href="#features">Key Features</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="cta-btn">Learn More</a>
+      <button class="menu-btn" id="menu-btn">☰</button>
     </div>
   </header>
 
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">✕</button>
+    <ul class="menu-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#product">Our Lead Product</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
   <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Revolutionizing Patient Care</h1>
-      <p class="tagline">Non-Invasive DVT Detection for a Healthier Tomorrow</p>
-      <a href="#overview" class="cta-btn">Discover More</a>
+  <section id="home" class="hero">
+    <model-viewer src="dvt.glb" alt="DVTect Device" auto-rotate camera-controls environment-image="neutral"></model-viewer>
+    <h1>DVTect: A New Era of DVT Detection</h1>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Scyntek is dedicated to transforming healthcare through innovation, empowering patients and providers with cutting-edge solutions.</p>
+    <div class="founders">
+      <img src="Vignesh.jpg" alt="Vignesh">
+      <img src="Bryce.jpg" alt="Bryce">
+      <img src="Karthik.jpg" alt="Karthik">
+      <img src="Josh.png" alt="Josh">
     </div>
   </section>
 
-  <!-- Overview Section -->
-  <section id="overview" class="overview">
-    <h2>About Scyntek</h2>
-    <p>Scyntek is dedicated to improving patient care through innovative, non-invasive deep vein thrombosis (DVT) detection. Our mission is to empower healthcare providers and patients with accessible and proactive solutions.</p>
-  </section>
-
-  <!-- Key Features Section -->
-  <section id="features" class="features">
-    <h2>Key Features</h2>
-    <div class="features-container">
+  <!-- Our Lead Product Section -->
+  <section id="product" class="product">
+    <h2>Our Lead Product</h2>
+    <p>DVTect is a revolutionary calf sleeve offering continuous, non-invasive blood flow monitoring to detect DVT early and reduce complications.</p>
+    <div class="features">
       <div class="feature">
         <h3>Non-Invasive Monitoring</h3>
-        <p>Continuous and comfortable monitoring using advanced PPG technology.</p>
+        <p>Continuous monitoring with integrated PPG sensors.</p>
       </div>
       <div class="feature">
         <h3>Real-Time Alerts</h3>
-        <p>Stay ahead with instant notifications for irregular blood flow patterns.</p>
+        <p>Instant alerts for irregular blood flow patterns.</p>
       </div>
       <div class="feature">
         <h3>Patient-Centric Design</h3>
-        <p>Engineered for comfort and ease of use, ensuring seamless integration into daily life.</p>
+        <p>Comfortable and easy to use for seamless integration into daily life.</p>
       </div>
     </div>
   </section>
@@ -64,8 +72,7 @@
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Have questions or want to collaborate? Reach out to us!</p>
-    <a href="mailto:info@scyntek.com" class="contact-btn">Email Us</a>
+    <p>Email: <a href="mailto:info@scyntek.com">info@scyntek.com</a></p>
     <p>Follow us on <a href="https://www.linkedin.com/company/scyntek/about/" target="_blank">LinkedIn</a></p>
   </section>
 
@@ -73,6 +80,21 @@
   <footer>
     <p>© 2025 Scyntek. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.style.transform = 'translateX(0)';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.style.transform = 'translateX(-100%)';
+    });
+  </script>
 </body>
 </html>
 
