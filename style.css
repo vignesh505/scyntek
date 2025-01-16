@@ -7,7 +7,7 @@ body {
 
 h1, h2 {
   text-align: center;
-  color: #3b4b6b;
+  color: #3b6b9b; /* Adjusted bluish-gray */
 }
 
 p {
@@ -39,10 +39,6 @@ header {
   padding: 10px 20px;
 }
 
-.logo-container {
-  position: relative;
-}
-
 .logo {
   height: 40px;
   cursor: pointer;
@@ -51,28 +47,13 @@ header {
   color: transparent;
 }
 
-.logo-link:hover + .dropdown-menu,
-.dropdown-menu:hover {
-  display: block;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background: #ffffff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+.menu {
   list-style: none;
-  padding: 10px;
+  display: flex;
+  gap: 20px;
 }
 
-.dropdown-menu li {
-  padding: 5px 10px;
-}
-
-.dropdown-menu a {
+.menu li a {
   text-decoration: none;
   color: #3b4b6b;
   font-weight: 500;
@@ -91,19 +72,18 @@ header {
 model-viewer {
   width: 400px;
   height: 400px;
-  --rotation-per-second: 30deg;
+  --rotation-per-second: 60deg;
 }
 
 h1 {
   margin: 20px 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #2e4d8e;
 }
 
 /* About Us Section */
 .about {
   background: linear-gradient(to right, #e8f3ff, #d6eaff);
-  padding: 60px 20px;
 }
 
 .founders {
@@ -111,6 +91,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 40px;
   justify-items: center;
+  margin-top: 40px; /* Spacing adjustment */
 }
 
 .team-member img {
@@ -123,7 +104,6 @@ h1 {
 /* Product Section */
 .product {
   background: linear-gradient(to left, #d6eaff, #c4e0ff);
-  padding: 60px 20px;
 }
 
 .features {
@@ -138,12 +118,14 @@ h1 {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Contact Section */
 .contact {
   background: linear-gradient(to bottom, #c4e0ff, #b3d7ff);
-  padding: 60px 20px;
 }
 
 /* Footer */
@@ -153,4 +135,3 @@ footer {
   padding: 10px 0;
   text-align: center;
 }
-
