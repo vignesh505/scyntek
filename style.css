@@ -27,7 +27,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to right, #ffffff, #f0f8ff), rgba(247, 247, 247, 0.8);
+  background: linear-gradient(to right, #f7f7f7, #f0f8ff), rgba(247, 247, 247, 0.8);
   background-blend-mode: overlay;
   
   z-index: 1000;
