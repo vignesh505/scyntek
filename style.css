@@ -94,6 +94,7 @@ h1 {
   gap: 40px;
   justify-items: center;
   margin-top: 40px; /* Spacing adjustment */
+  align-items: center;
 }
 
 .team-member img {
@@ -101,6 +102,7 @@ h1 {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 /* Product Section */
