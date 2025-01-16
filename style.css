@@ -96,6 +96,17 @@ h1 {
   margin-top: 40px; /* Spacing adjustment */
   align-items: center;
 }
+.team-member p {
+  margin: 0;
+  font-size: 1rem;
+  color: #3b4b6b; /* Matches site color scheme */
+}
+.team-member {
+  display: flex;
+  flex-direction: column; /* Keeps image and text in a vertical stack */
+  align-items: center; /* Centers both image and text */
+  text-align: center; /* Ensures the text is centered below the image */
+}
 
 .team-member img {
   width: 120px;
