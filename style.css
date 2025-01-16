@@ -44,7 +44,7 @@ header {
 .logo {
   height: 40px;
   cursor: pointer;
-  background: linear-gradient(to right, #f0f8ff, #ffffff);
+  background: linear-gradient(to right, #f0f8ff, #f7f7f7);
   -webkit-background-clip: text;
   color: transparent;
 }
