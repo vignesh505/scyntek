@@ -114,6 +114,7 @@ h1 {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
+  transform: translateX(5px);
 }
 
 /* Product Section */
