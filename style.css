@@ -27,7 +27,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to right, rgb(247, 247, 247); /* Combine gradient and logo color */
+  background: linear-gradient(to right, #ffffff, #f0f8ff), rgba(247, 247, 247, 0.8);
+  background-blend-mode: overlay;
   
   z-index: 1000;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
