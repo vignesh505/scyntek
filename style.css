@@ -128,6 +128,7 @@ h1 {
 .contact {
   background: linear-gradient(to bottom, #839ab8, #6b86a1);
   padding: 60px 20px;
+  color: white;
 }
 
 /* Footer */
