@@ -125,13 +125,14 @@ h1 {
 
 /* Contact Section */
 .contact {
-  background: linear-gradient(to bottom, #c4e0ff, #b3d7ff);
+  background: linear-gradient(to bottom, #839ab8, #6b86a1);
+  padding: 60px 20px;
 }
 
 /* Footer */
 footer {
   background: #3b4b6b;
-  color: #fff; /* Changed to white */
+  color: #ffff; /* Changed to white */
   padding: 10px 0;
   text-align: center;
 }
