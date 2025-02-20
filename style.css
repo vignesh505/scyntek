@@ -88,6 +88,64 @@ h1 {
   color: #2e4d8e;
 }
 
+/* Section Styling */
+#figures-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #f0f0f0;
+  flex-direction: column;
+}
+
+/* Figures Container */
+.figures-container {
+  display: flex;
+  flex-direction: column; /* Ensures title is above figures */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Title Styling */
+.figures-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px; /* Adds spacing between title and figures */
+}
+
+.figures_text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Figures Row */
+.figures {
+  display: flex;  
+  flex-direction: row; /* Keeps figures in a horizontal line */
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Figure Styling */
+.figure {
+  width: 50px;
+  height: 100px;
+  background-color: lightblue;
+  border-radius: 10px;
+  transition: background-color 0.8s ease-in-out;
+}
+
+/* The shaded figure (animation controlled via JavaScript) */
+.shaded {
+  background-color: lightblue; /* Starts as light blue */
+}
+
+.shaded.show {
+  background-color: black; /* Fades to black when shown */
+}
 
 .lung-icon {
   width: 100%;
@@ -140,6 +198,38 @@ h1 {
 /* About Us Section */
 .about {
   background: linear-gradient(to right, #e8f3ff, #d6eaff);
+}
+
+.bubble-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between bubbles */
+  margin-top: 20px;
+}
+
+.bubble {
+  background-color: #3b6b9b; /* Matching your color scheme */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  max-width: 150px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #3b6b9b; /* Same as bubble color */
 }
 
 .founders {
@@ -209,34 +299,3 @@ footer {
   text-align: center;
 }
 
-.bubble-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px; /* Space between bubbles */
-  margin-top: 20px;
-}
-
-.bubble {
-  background-color: #3b6b9b; /* Matching your color scheme */
-  color: white;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-size: 14px;
-  text-align: center;
-  max-width: 150px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-.bubble::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #3b6b9b; /* Same as bubble color */
-}
