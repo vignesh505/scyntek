@@ -27,11 +27,13 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to right, #f7f7f7, #f0f8ff), rgba(247, 247, 247, 0.8);
+  /* background: linear-gradient(to right, #f7f7f7, #f0f8ff), rgba(200, 200, 200, 0.8); */
+  background-color: rgb(247,247,247);  
   background-blend-mode: overlay;
-  
   z-index: 1000;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(118, 95, 95, 0.1);
+  margin: 0; /* Ensure no margin around the header */
+  /* padding: 0; /* Remove any internal padding if needed */
 }
 
 .navbar {
@@ -39,19 +41,20 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  
 }
 
 .logo {
   height: 40px;
   cursor: pointer;
   border-radius: 10px; /* Rounded edges */
-  box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.7), 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle glossy effect */
+  /* box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.7), 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle glossy effect */
   transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover transition */
 }
 
 .logo:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: inset 0px 2px 6px rgba(255, 255, 255, 0.8), 0px 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  /* box-shadow: inset 0px 2px 6px rgba(255, 255, 255, 0.8), 0px 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .menu {
