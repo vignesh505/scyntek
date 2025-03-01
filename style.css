@@ -45,7 +45,7 @@ header {
 }
 
 .logo {
-  height: 40px;
+  height: 60px;
   cursor: pointer;
   border-radius: 10px; /* Rounded edges */
   /* box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.7), 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle glossy effect */
