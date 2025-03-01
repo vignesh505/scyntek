@@ -288,21 +288,23 @@ section {
 }
 
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers features properly */
+  gap: 20px; /* Adds spacing between features */
+  max-width: 1000px; /* Prevents overly stretched layouts on large screens */
+  margin: 0 auto; /* Centers the feature container */
 }
 
 .feature {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  flex: 1 1 calc(50% - 20px); /* Makes sure two features appear per row on large screens */
+  min-width: 250px; /* Prevents excessive shrinking on smaller screens */
   text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #f5f5f5; /* Light background for visibility */
+  padding: 15px;
+  border-radius: 10px;
 }
+
 
 /* Contact Section */
 .contact {
