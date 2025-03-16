@@ -9,19 +9,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <a href="#home" class="logo-link">
-        <img src="logo.png" alt="Scyntek Logo" class="logo">
-      </a>
-      <ul class="menu">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#product">Our Product</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ <!-- Header -->
+<header>
+  <nav class="navbar">
+    <a href="#home" class="logo-link">
+      <img src="logo.png" alt="Scyntek Logo" class="logo">
+    </a>
+    <div class="hamburger" aria-label="Toggle menu" tabindex="0">
+      &#9776;
+    </div>
+    <ul class="menu">
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#product" class="nav-link">Our Product</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -171,5 +175,18 @@
 
 <script src="scroll.js" defer></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+});
+
+</script>
+
 </body>
 </html>
+

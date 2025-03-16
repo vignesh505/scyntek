@@ -40,16 +40,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  
+  padding: 1rem 2rem;
+  background-color: rgb(247, 247, 247);
+  position: fixed;
+  width: 100%;
+  max-width: 1200px; /* Prevents over-expansion on big screens */
+  margin: 0 auto;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
   height: 60px;
-  cursor: pointer;
-  border-radius: 10px; /* Rounded edges */
-  /* box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.7), 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle glossy effect */
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover transition */
 }
 
 .logo:hover {
@@ -58,16 +61,67 @@ header {
 }
 
 .menu {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: flex-end; /* Aligns to the right side */
+  list-style: none;
+  gap: 1.5rem; /* Reduced to prevent cut-off */
 }
 
-.menu li a {
-  text-decoration: none;
-  color: #3b4b6b;
-  font-weight: 500;
+.menu li {
+  display: inline-block;
 }
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #007bff;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  background: red;
+  border: 2px solid black;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 10;
+}
+
+/* Show hamburger on smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
 
 /* Hero Section */
 .hero {
