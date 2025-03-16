@@ -122,6 +122,10 @@ header {
     padding-right: 1rem; /* Add some spacing */
   }
   
+  .menu a {
+    font-size: 0.75rem; /* Smaller font size (14px) */
+  }
+
   header {
     z-index: 1100;
     overflow: visible;
