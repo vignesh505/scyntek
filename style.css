@@ -97,6 +97,13 @@ header {
 /* Show hamburger on smaller screens */
 @media (max-width: 768px) {
 
+  .logo {
+    height: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
   .menu {
     display: flex;
     justify-content: center;
